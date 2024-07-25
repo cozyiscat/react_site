@@ -1,0 +1,100 @@
+/* 리뷰 */
+
+#main_review {
+    margin: 50px auto;
+    margin-bottom: 200px;
+    width: 1500px;
+    text-align: center;
+}
+.reviewTop {
+    position: relative;
+    margin: 20px 0;
+    height: 70px;
+    width: 100%;
+
+}
+.reviewTop>h1 {
+    line-height: 70px;
+    font-size: 40px;
+}
+.reviewTop>div {
+    position: absolute;
+    right: 0;
+    top: 25px;
+    margin-right: 70px;
+}
+.reviewTop>div a {
+    color: #aaa;
+    margin-right: 10px;
+    font-size: 13px;
+}
+.reviewTop>div img {
+    width: 10px;
+}
+
+.reviewSec {
+    margin: 50px auto;
+}
+.reviewPart {
+    display: inline-block;
+    border: 1px solid #ccc;
+    margin: 0 10px;
+    width: 320px;
+    height: 500px;
+}
+.reviewPart>div>a>img {
+    width: 320px;
+    height: 320px;
+}
+.reviewTxt {
+    padding: 20px 10px;
+}
+.reviewTxt>h3 {
+    height: 25px;
+    font-size: 17px;
+    font-weight: 1000;
+    color: #111;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.reviewTxt>p {
+    margin: 10px 0;
+    height: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    color: #777;
+}
+.reviewTxtImg {
+    height: 50px;
+    line-height: 50px;
+}
+.reviewTxtImg>a{
+    float: left;
+    margin: 0 10px;
+}
+.reviewTxtImg>a>img {
+    width: 50px;
+}
+.reviewTxtImg>p {
+    float: left;
+    font-size: 14px;
+    color: #777;
+    font-weight: 600;
+}
+.reviewTxtImg>img {
+    float: right;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.reviewPart{
+    transition: all 0.4s ease;
+}
+.reviewPart:hover {
+    transform: translateY(-20px);
+    box-shadow: 5px 7px 10px 2px rgba(0,0,0, 0.1);
+}

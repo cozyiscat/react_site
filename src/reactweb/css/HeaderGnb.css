@@ -1,0 +1,60 @@
+/* 헤더 네비게이션 */
+#header_gnb {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+#main_gnb {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    width: 600px;
+}
+
+#main_gnb>li {
+    position: relative;
+}
+#main_gnb>li>a {
+    display: block;
+    padding: 5px 5px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #444;
+    width: 90px;
+}
+#main_gnb>li>a:hover {
+    color: #2af;
+}
+#main_gnb>div {
+    color: #aaa;
+    font-weight: 700px;
+    line-height: 30px;
+}
+.gnb {
+    width: 130px;
+    padding: 20px 2px;
+    display: none;
+    z-index: 10;
+    left: -20px;
+    border: 1px solid #444;
+    font-size: 13px;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+}
+.gnb>li {
+    margin-bottom: 10px;
+}
+.gnb>li>a {
+    color: #222;
+}
+.gnb>li>a:hover {
+    color: #2af;
+}
+.line {
+    border-bottom: 1px solid #ccc;
+}
+#main_gnb>li:hover> .gnb {
+    display: block;
+}

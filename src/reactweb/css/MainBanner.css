@@ -1,0 +1,8 @@
+/* 퓨어셀 이미지배너 */
+
+.main_banner {
+    margin-bottom: 50px;
+}
+.main_banner>img {
+    width: 100%;
+}

@@ -1,0 +1,29 @@
+/* 헤더 로그인 , 로고 */
+#header_bottom {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1500px;
+}
+#logo {
+    text-align: center;
+    margin: 15px auto;
+}
+
+#header_login {
+    overflow: hidden;
+    margin: 0 10px;
+    font-size: 13px;
+    margin-top: 5px;
+}
+#header_login span{
+    color: #ccc;
+    float: right;
+    margin-right: 10px;
+    
+}
+#header_login a {
+    margin-right: 10px;
+    float: right;
+    font-weight: 600;
+    color: #555;
+}

@@ -1,0 +1,28 @@
+/* 헤더 상단 카카오 */
+#header_top {
+    width: 100%;
+    position: relative;
+}
+#header_top .topBannerImg {
+    height: 40px;
+    width: 100%;
+}
+#header_top>a {
+    text-align: center;
+    color: black;
+}
+#header_top>a>span {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 40px;
+}
+#header_top span:hover {
+    color: skyblue;
+}
+#header_top>a>span>img {
+    transform: translate(0, 32%);
+}

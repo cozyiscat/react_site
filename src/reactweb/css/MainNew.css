@@ -1,0 +1,68 @@
+/* 신상품 */
+
+#main_new {
+    margin: 130px auto;
+    width: 1500px;
+    text-align: center;
+}
+#main_new>h1 {
+    font-size: 40px;
+    padding: 20px;
+}
+div.newList {
+    overflow: hidden;
+    /* padding: 20px; */
+}
+ul.newImg {
+    float: left;
+    margin: 40px 22px;
+    /* margin: 40px; */
+}
+.newImg>li {
+    width: 450px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.newImg>li>a>img {
+    width: 450px;
+    height: 450px;
+    z-index: 0;
+}
+.newImgText {
+    text-overflow: ellipsis;
+}
+.newImgText >a {
+    white-space: nowrap;
+    color: #555;
+    font-size: 22px;
+    font-weight: 600;
+}
+.newImg>li>h1 {
+    display: inline;
+    margin-right: 10px;
+    color: #2af;
+}
+.newImg>li>s {
+    font-size: 20px;
+    font-weight: 700;
+    color: #aaa;
+}
+.newImg>li>a>.listDecoBox {
+    width: 70px;
+    height: 70px;
+    background-color: #2af;
+    text-align: center;
+    line-height: 70px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out ;
+}
+.newImg>li>a:hover .listDecoBox{
+    opacity: 1;
+}

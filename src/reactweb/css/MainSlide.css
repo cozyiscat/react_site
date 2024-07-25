@@ -1,0 +1,71 @@
+#main_slide_box{
+    width: 100%;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+#main_slide {
+    width: 1200px;
+    /* border: 1px solid black; */
+    margin: auto;
+    z-index: 0;
+    position: relative;
+    max-width: 100%;
+}
+
+.slider_panel{
+    display: flex;
+}
+.slider_panel>li {
+    transition: transform 0.5s ease
+}
+.slider_panel>li>a {
+    width: 1200px;
+    box-sizing: border-box;
+    padding: 10px;
+    display: block;
+}
+
+.slider_panel>li>a>img {            
+    width:100%;
+    display: block;
+}
+
+.control_panel {
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+    left: 50%; /* 중앙 정렬을 위해 left 값을 수정 */
+    transform: translateX(-50%);
+}
+
+.control_btn {
+    margin: 0 20px;
+    width: 16px;
+    height: 16px;
+    background-color: #ddd; 
+    border-radius: 50%;
+}
+.btn_check {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid white; 
+}
+.slide_btn {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    justify-content: space-between; /* 좌우 버튼 사이의 간격을 설정 */
+    display: flex;
+}
+.leftBtn>img {
+    transform: rotate(-90deg);
+    cursor: pointer;
+    position: absolute;
+     left:50px; 
+}
+.rightBtn>img {
+    transform: rotate(90deg);
+    cursor: pointer;
+    position: absolute;
+     right:50px; 
+}
