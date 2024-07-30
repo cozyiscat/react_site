@@ -7,18 +7,16 @@ export function HeaderCart(){
     const [showSearch, setShowSearch] = useState(false);
     
    const handleSearchClick = () => {
-        setShowSearch(showSearch => !showSearch); // 상태를 토글
+        setShowSearch(true); // 상태를 토글
     };
-    const handleClose = () => {
-        setShowSearch(false);
-    };
+    
     return (
         <>
             <div id="cart">
                 <div className="search">
-                    <a href="" onClick={handleSearchClick}>
-                        <img src={icHdSearch} alt="Search" className="imgSearch" />
-                    {showSearch && <SearchImg onClose={handleClose} />}
+                    <a href="">
+                        <img src={icHdSearch} alt="Search" className="imgSearch"  onClick={handleSearchClick}/>
+                    {<SearchImg showSearch={showSearch} setShowSearch={e=>setShowSearch(e)}/>}
                     </a>
                     <a href="order-basket.html">
                         <img src={icHdBag} alt="Cart" />

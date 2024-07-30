@@ -4,20 +4,30 @@ import "./css/SearchImg.css";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
 
-export function SearchImg({onClose}){
-    const [show, setShow] = useState(true);
+export function SearchImg(props){
+    
+    const [show, setShow] = useState(false);
     const searchImgRef = useRef(null);
 
+    useEffect(() => {
+        const searchImgElement = searchImgRef.current;
+        if (searchImgElement) {
+            if (props.showSearch) {
+                searchImgElement.classList.add('show');
+                searchImgElement.classList.remove('hide');
+            } else {
+                searchImgElement.classList.add('hide');
+                searchImgElement.classList.remove('show');
+            }
+        }
+    }, [props.showSearch]);
 
     const slideClose = ()=>{
-        setShow(false);
-        if (onClose) {
-            onClose();//부모 컴포넌트의 onClose 함수 호출
-        }
+        props.setShowSearch(false);
     }
     return(
         <>
-            <div id="searchImg" ref={searchImgRef} className={show?'show':'hide'}>
+            <div id="searchImg" ref={searchImgRef} >
                 <div className="searchSize">
                     <div className="searchClose">
                         <img src={btnSearchClose} onClick={slideClose} alt=""/>
