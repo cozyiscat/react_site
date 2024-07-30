@@ -4,15 +4,27 @@ import "./css/HeaderCart.css";
 import {SearchImg} from "./SearchImg";
 import { useState } from "react";
 export function HeaderCart(){
-    const imgSearch = (".imgSearch");
-    return(
+    const [showSearch, setShowSearch] = useState(false);
+    
+   const handleSearchClick = () => {
+        setShowSearch(showSearch => !showSearch); // 상태를 토글
+    };
+    const handleClose = () => {
+        setShowSearch(false);
+    };
+    return (
         <>
-         <div id="cart">
+            <div id="cart">
                 <div className="search">
-                    <a href="#"><img src={icHdSearch} onClick={()=>handleSlide} alt="" className="imgSearch"/></a>
-                    <a href="order-basket.html"><img src={icHdBag} alt=""/></a>
+                    <a href="" onClick={handleSearchClick}>
+                        <img src={icHdSearch} alt="Search" className="imgSearch" />
+                    {showSearch && <SearchImg onClose={handleClose} />}
+                    </a>
+                    <a href="order-basket.html">
+                        <img src={icHdBag} alt="Cart" />
+                    </a>
                 </div>
             </div>
         </>
-    )
+    );
 }

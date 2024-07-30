@@ -2,28 +2,25 @@ import btnSearchClose from "./images/svg/btn_search_close.svg";
 import search2 from "./images/ic_header_search2.png";
 import "./css/SearchImg.css";
 import { useEffect, useState } from "react";
+import { useRef } from "react";
 
-export function SearchImg(){
-    const [slideDown, setSlideDown] = useState(true);
-    let searchImg = ('#searchImg');
-    let searchClose = ('.searchClose');
-    useEffect ((e) => {
-        const slideImg = Animation.slideDown(500,'swing').css('display','block');
-        setSlideDown(slideImg);
-    },[]);
-    // const handleSlide = ()=>{
-    //     (searchImg).slideDown(500,'swing');
-    //     (searchImg).css('display','block');
-    // }
+export function SearchImg({onClose}){
+    const [show, setShow] = useState(true);
+    const searchImgRef = useRef(null);
+
+
     const slideClose = ()=>{
-        (searchImg).slideUp(500,'swing');
+        setShow(false);
+        if (onClose) {
+            onClose();//부모 컴포넌트의 onClose 함수 호출
+        }
     }
     return(
         <>
-            <div id="searchImg">
+            <div id="searchImg" ref={searchImgRef} className={show?'show':'hide'}>
                 <div className="searchSize">
                     <div className="searchClose">
-                        <img src={btnSearchClose} onClick={()=>slideClose} alt=""/>
+                        <img src={btnSearchClose} onClick={slideClose} alt=""/>
                     </div>
                     <div className="searchInput">
                         <input type="text" placeholder=" 검색어를 입력해주세요."/>

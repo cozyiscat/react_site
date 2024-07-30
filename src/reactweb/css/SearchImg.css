@@ -1,12 +1,28 @@
 /* 검색창  */
 #searchImg {
-    display: none;
+    opacity: 0;
+    /* max-height: 0; */
+    /* overflow: hidden; */
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    /* display: none; */
     /* position: absolute; */
     z-index: 11;
     position: fixed;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0, 0.7) ;
+}
+/* show 클래스를 추가할 때의 스타일 */
+#searchImg.show {
+    display: block;
+    opacity: 1; /* 불투명 상태 */
+    transform: translateY(0); /* 애니메이션 적용 위치 설정 */
+    /* max-height: 1000px; 최대 높이 설정 (필요에 따라 조정) */
+}
+/* hide 클래스가 추가될 때 */
+#searchImg.hide {
+    opacity: 0; /* 사라지도록 설정 */
+    transform: translateY(-100%); /* 애니메이션으로 위로 이동 */
 }
 .searchSize {
     /* border: 1px solid white; */
