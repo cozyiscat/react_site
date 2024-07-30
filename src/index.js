@@ -5,12 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { MainHeader } from './reactweb/MainHeader';
 import { MainPage } from './reactweb/MainPage';
+import { MainFooter } from './reactweb/MainFooter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
   <MainHeader/>
   <MainPage/>
+  <MainFooter/>
   </>
 );
 
